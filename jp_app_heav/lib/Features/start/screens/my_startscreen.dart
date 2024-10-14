@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jp_app_heav/features/startscreen/widget/snackish_box.dart';
+import 'package:jp_app_heav/features/start/widget/snackish_box.dart';
 
 class MyStartscreen extends StatefulWidget {
   const MyStartscreen({super.key});
