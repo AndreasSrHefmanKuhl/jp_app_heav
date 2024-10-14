@@ -13,7 +13,7 @@ class SnackishBox extends StatelessWidget {
             color: Colors.white60,
             width: 1.0,
           ),
-          borderRadius: const BorderRadius.all(Radius.circular(16))),
+          borderRadius: const BorderRadius.all(Radius.circular(25))),
       height: 180,
       width: 250,
       child:

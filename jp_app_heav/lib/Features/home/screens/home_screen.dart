@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/scroll_physics.dart';
+
 import 'package:jp_app_heav/features/home/widgets/tab_bar_container.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,22 +24,24 @@ class _MyHomeScreenState extends State<HomeScreen> {
             ),
           ),
           const Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-            SizedBox(height: 70),
+            SizedBox(height: 50),
             Text(
               'choose your favorite snack!',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 50),
-            Padding(
-              padding: EdgeInsets.all(9.0),
-              child: SingleChildScrollView(
-                child:
-                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  TabBarContainer(text: 'Salty'),
-                  TabBarContainer(text: 'sweety'),
-                  TabBarContainer(text: 'spicy')
-                ]),
-              ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child:
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                TabBarContainer(text: 'Salty'),
+                SizedBox(width: 10),
+                TabBarContainer(text: 'sweety'),
+                SizedBox(width: 10),
+                TabBarContainer(text: 'spicy'),
+                SizedBox(width: 10),
+                TabBarContainer(text: 'Show them all'))
+              ]),
             ),
           ]),
         ]),
