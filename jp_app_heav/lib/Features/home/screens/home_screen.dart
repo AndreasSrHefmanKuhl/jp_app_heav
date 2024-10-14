@@ -40,7 +40,7 @@ class _MyHomeScreenState extends State<HomeScreen> {
                 SizedBox(width: 10),
                 TabBarContainer(text: 'spicy'),
                 SizedBox(width: 10),
-                TabBarContainer(text: 'Show them all'))
+                TabBarContainer(text: 'Show them all')
               ]),
             ),
           ]),
