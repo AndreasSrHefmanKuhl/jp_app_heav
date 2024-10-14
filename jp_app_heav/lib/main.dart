@@ -1,15 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:jp_app_heav/features/screens/my_startscreen.dart';
 
 void main() {
-  runApp(const MyStartscreen());
+  runApp(const HomeScreen());
 }
 
-class Homnescreen extends StatelessWidget {
-  const Homnescreen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
+  State<HomeScreen> createState() => _MyHomeScreenState();
+}
+
+class _MyHomeScreenState extends State<HomeScreen> {
+  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      home: Scaffold(
+        body: Stack(children: [
+          Container(
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(
+                        'assets/images/hintergründe/bg_mainscreen.png'),
+                    fit: BoxFit.cover)),
+          ),
+        ]),
+      ),
+    );
   }
 }
