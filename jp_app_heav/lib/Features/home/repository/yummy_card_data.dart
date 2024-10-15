@@ -6,20 +6,17 @@ List<YummyCard> products = const [
     title: 'Angis Yummy Burger',
     description: 'Delish vergan burger that testes like heaven',
     price: '₳ 13.99',
-    value: '120',
   ),
   YummyCard(
     assets: 'assets/images/grafiken/cat_cupcake_3D.png',
     title: 'Moglis Cup',
     description: 'Strawberry ice cream',
     price: '₳ 8.99',
-    value: '200',
   ),
   YummyCard(
     assets: 'assets/iamges/grafiken/ice.cream.png',
     title: 'Balu`s Cup',
     description: 'Pistachio ice cream',
     price: '₳ 8.99',
-    value: '100',
   ),
 ];

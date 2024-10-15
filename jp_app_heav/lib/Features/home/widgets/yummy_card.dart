@@ -23,23 +23,23 @@ class YummyCard extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         Positioned(
+          right: 400,
+          bottom: 150,
           child: Image(
             image: AssetImage(assets),
           ),
-          right: 400,
-          bottom: 150,
         ),
         const SizedBox(height: 10),
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(height: 5),
+        const SizedBox(height: 5),
         Text(description),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -47,9 +47,9 @@ class YummyCard extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 //navigator to bottomsheet
-                print('Produkt zum Warenkorb hinzugefügt: $title');
+                // print('Produkt zum Warenkorb hinzugefügt: $title');
               },
-              child: Text('Add to Order'),
+              child: const Text('Add to Order'),
             ),
           ],
         ),
