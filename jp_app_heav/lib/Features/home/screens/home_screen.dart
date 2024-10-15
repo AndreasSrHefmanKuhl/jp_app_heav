@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:jp_app_heav/features/home/widgets/tab_bar_container.dart';
+import 'package:jp_app_heav/features/home/widgets/yummy_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,38 +24,32 @@ class _MyHomeScreenState extends State<HomeScreen> {
                   fit: BoxFit.cover),
             ),
           ),
-          const Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-            SizedBox(height: 50),
-            Text(
-              'choose your favorite snack!',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 50),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child:
-                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                TabBarContainer(text: 'Salty'),
-                SizedBox(width: 10),
-                TabBarContainer(text: 'sweety'),
-                SizedBox(width: 10),
-                TabBarContainer(text: 'spicy'),
-                SizedBox(width: 10),
-                TabBarContainer(text: 'Show them all')
+          const Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 100),
+                Text('choose your favorite snack!',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.start),
+                SizedBox(height: 10),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TabBarContainer(text: 'Salty'),
+                        SizedBox(width: 10),
+                        TabBarContainer(text: 'sweety'),
+                        SizedBox(width: 10),
+                        TabBarContainer(text: 'spicy'),
+                        SizedBox(width: 10),
+                        TabBarContainer(text: 'Show them all')
+                      ]),
+                ),
               ]),
-            ),
-          ]),
         ]),
       ),
     );
-  }
-}
-
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Card();
   }
 }
