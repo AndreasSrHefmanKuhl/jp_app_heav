@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:jp_app_heav/features/home/repository/yummy_card_data.dart';
-import 'package:jp_app_heav/features/home/widgets/tab_bar_container.dart';
+import 'package:jp_app_heav/features/home/widgets/slide_card_view.dart';
+
+import 'package:jp_app_heav/features/home/widgets/top_side_view.dart';
 import 'package:jp_app_heav/features/home/widgets/yummy_card.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,8 +12,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _MyHomeScreenState extends State<HomeScreen> {
-  final List<YummyCard> product = products;
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,27 +29,14 @@ class _MyHomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 100),
-                const Text('choose your favorite snack!',
+                SizedBox(height: 100),
+                Text('choose your favorite snack!',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.start),
-                const SizedBox(height: 10),
-                const SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        TabBarContainer(text: 'Salty'),
-                        SizedBox(width: 10),
-                        TabBarContainer(text: 'sweety'),
-                        SizedBox(width: 10),
-                        TabBarContainer(text: 'spicy'),
-                        SizedBox(width: 10),
-                        TabBarContainer(text: 'Show them all')
-                      ]),
-                ),
+                SizedBox(height: 10),
+                TopSideView(),
                 Positioned(
-                  bottom: -150,
+                  bottom: -300,
                   right: 150,
                   child: YummyCard(
                       assets: 'assets/images/grafiken/Burger_3D.png',
@@ -58,6 +44,7 @@ class _MyHomeScreenState extends State<HomeScreen> {
                       description: 'fresh Vegan meats/n that taste like heaven',
                       price: '13.99'),
                 ),
+                SlideCardView(),
               ]),
         ]),
       ),
