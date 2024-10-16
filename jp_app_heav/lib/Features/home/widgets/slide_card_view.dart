@@ -1,27 +1,28 @@
 import 'package:flutter/material.dart';
-
-import 'package:jp_app_heav/features/home/repository/yummy_card_data.dart';
-import 'package:jp_app_heav/features/home/widgets/slide_card.dart';
+import 'package:jp_app_heav/features/home/widgets/big_button.dart';
+import 'package:jp_app_heav/features/home/widgets/tab_button.dart';
 
 class SlideCardView extends StatelessWidget {
-  const SlideCardView({
-    super.key,
-  });
+  const SlideCardView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ListView.builder(
-        itemCount: products.length,
-        itemBuilder: (context, index) {
-          final product = products[index];
-          return SlideCard(
-            asset: product.assets,
-            title: product.title,
-            description: product.description,
-            price: product.price,
-          );
-        },
+    return const SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Expanded(
+        child: Row(
+          children: [
+            BigButton(),
+            SizedBox(width: 8),
+            TabButton(text: ' Salty'),
+            SizedBox(width: 8),
+            TabButton(
+              text: 'Sweet',
+            ),
+            SizedBox(width: 8),
+            TabButton(text: "Drinks"),
+          ],
+        ),
       ),
     );
   }

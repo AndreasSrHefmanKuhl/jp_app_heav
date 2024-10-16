@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Stack(
           fit: StackFit.expand,
           children: [
-            Image.asset("assets/backgrounds/bg_mainscreen.png",
+            Image.asset("assets/images/hintergründe/bg_mainscreen.png",
                 fit: BoxFit.cover),
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 80, 16, 24),
@@ -73,28 +73,30 @@ class _HomeScreenState extends State<HomeScreen> {
                           _bottomFoodItem(
                             title: 'Mogli`s Cup',
                             flavor: 'Strawberry ice cream',
-                            imagePath: 'assets/graphics/cat_cupcakes_3D.png',
+                            imagePath:
+                                'assets/images/grafiken/cat cupcakes_3D.png',
                             price: '8.99',
                           ),
                           const SizedBox(width: 16),
                           _bottomFoodItem(
                             title: 'Balu`s Cup',
                             flavor: 'Pistachio ice cream',
-                            imagePath: 'assets/graphics/Ice.cream.png',
+                            imagePath: 'assets/images/grafiken/ice.cream.png',
                             price: '8.99',
                           ),
                           const SizedBox(width: 16),
                           _bottomFoodItem(
                             title: 'Ice Cream Stick',
                             flavor: 'Vanilla ice cream',
-                            imagePath: 'assets/graphics/ice cream stick_3D.png',
+                            imagePath:
+                                'assets/images/grafiken/ice cream stick_3D.png',
                             price: '8.99',
                           ),
                           const SizedBox(width: 16),
                           _bottomFoodItem(
                             title: 'Ice Cup',
                             flavor: 'Chocolate ice cream',
-                            imagePath: 'assets/graphics/Icecream_3D.png',
+                            imagePath: 'assets/images/grafiken/Icecream_3D.png',
                             price: '8.99',
                           ),
                           const SizedBox(width: 16), // Abstand zum rechten Rand
@@ -110,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
               bottom: 280,
               child: Transform.scale(
                   scale: 0.6,
-                  child: Image.asset('assets/graphics/Burger_3D.png')),
+                  child: Image.asset('assets/images/grafiken/Burger_3D.png')),
             ),
           ],
         ),
@@ -158,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   scale: 0.9,
                   child: const Image(
                     image: AssetImage(
-                      'assets/graphics/cat_cupcakes_3D.png',
+                      'assets/images/grafiken/cat_cupcakes_3D.png',
                     ),
                   ),
                 ),

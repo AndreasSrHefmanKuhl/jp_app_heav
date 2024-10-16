@@ -5,6 +5,7 @@ import 'package:jp_app_heav/features/start/widget/snackish_box.dart';
 class MyStartscreen extends StatelessWidget {
   const MyStartscreen({super.key});
 
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
