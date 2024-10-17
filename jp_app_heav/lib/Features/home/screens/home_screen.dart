@@ -3,10 +3,14 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:jp_app_heav/features/home/widgets/drawer_view.dart';
 import 'package:jp_app_heav/features/home/widgets/size.dart';
-import 'package:jp_app_heav/features/home/widgets/slide_card.dart';
+import 'package:jp_app_heav/features/home/models/slide_card.dart';
 import 'package:jp_app_heav/features/home/widgets/slide_card_view.dart';
 
-import 'package:jp_app_heav/features/home/widgets/yummy_card.dart';
+import 'package:jp_app_heav/features/home/models/yummy_card.dart';
+
+void main() {
+  runApp(const HomeScreen());
+}
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
